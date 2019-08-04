@@ -1,0 +1,15 @@
+cargo-features = ["profile-overrides"]
+
+[package]
+name = "ud2"
+version = "0.1.0"
+authors = ["mvlabat <mvlabat@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+specs = { version = "0.14.3", features = ["common"] }
+
+[profile.dev.overrides."*"]
+opt-level = 3
